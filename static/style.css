@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body.home-page {
     margin: 0;
     padding: 0;
@@ -5,5 +10,62 @@ body.home-page {
     height: 100%;    
     width: 100%; 
     background-position: center;   
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat; 
+}
+
+.maintext {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 40%;
+}
+
+.title {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: #fff1ec;
+    line-height: 80px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: #fff1ec;
+}
+
+
+.topbox {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    background-color: #FFF1EC;
+    height: 24%;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.middlebox {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    background-color: #FFF1EC;
+    height: 24%;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.bottombox {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    background-color: #FFF1EC;
+    height: 24%;
+    width: 20%;
+    border-radius: 20px;
 }
