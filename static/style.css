@@ -16,9 +16,9 @@ body.home-page {
 .maintext {
     position: fixed;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    transform: translateY(-50%);
+    left: 12%;
+    text-align: left;
     width: 40%;
 }
 
@@ -42,30 +42,89 @@ body.home-page {
 .topbox {
     position: fixed;
     top: 10%;
-    right: 10%;
+    right: 12%;
     background-color: #FFF1EC;
     height: 24%;
-    width: 20%;
+    width: 21%;
     border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.topbox:hover {
+    transform: translateX(-30px);
 }
 
 .middlebox {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    right: 10%;
+    right: 12%;
     background-color: #FFF1EC;
     height: 24%;
-    width: 20%;
+    width: 21%;
     border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.middlebox:hover {
+    transform: translateY(-50%) translateX(-30px);
 }
 
 .bottombox {
     position: fixed;
     bottom: 10%;
-    right: 10%;
+    right: 12%;
     background-color: #FFF1EC;
     height: 24%;
-    width: 20%;
+    width: 21%;
     border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.bottombox:hover {
+    transform: translateX(-30px);
+}
+
+.tbtitle,
+.mbtitle,
+.bbtitle {
+    display: block;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 45px;
+    color: #ec7790;
+    line-height: 40px;
+    margin-bottom: 10px;
+    line-height: 47px;
+}
+
+.tbsubtitle,
+.mbsubtitle,
+.bbsubtitle {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: #ec7790;
+    line-height: 20px;
 }
