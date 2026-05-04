@@ -13,19 +13,19 @@
         <div class="subtitle">Learn the basics of budgeting, manage irregular income, and reach your saving goals.</div>
     </div>
     
-    <div href="/info" class="topbox"> 
+    <a href="{{ url_for('information') }}" class="topbox"> 
         <span class="tbsubtitle">How to</span>
         <span class="tbtitle">Budget your Money</span>
-    </div>
+    </a>
     
-    <div href="/saving" class="middlebox"> 
+    <a href="{{ url_for('goal') }}" class="middlebox"> 
         <span class="mbtitle">Saving <br/> Goal</span>
         <span class="mbsubtitle">Calculator</span>
-    </div>
+    </a>
     
-    <div href="/income" class="bottombox"> 
+    <a href="{{ url_for('income') }}" class="bottombox"> 
         <span class="bbtitle">Income Smoothing</span>
         <span class="bbsubtitle">Calculator</span>
-    </div>
+    </a>
 </body>
 </html>

@@ -10,6 +10,14 @@ def home():
 def information():
     return render_template('info.html')
 
+@app.route('/goal')
+def goal():
+    return render_template('goal.html')
+
+@app.route('/income')
+def income():
+    return render_template('income.html')
+
 @app.route('/quiz')
 def quiz():
     return render_template('quiz.html')
