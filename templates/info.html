@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Budget Education</title>
 </head>
-<body>
-    <a href="{{ url_for('home') }}">Zurück zur Startseite</a>
-    <div>Budget Information</div>
+<body class="info-page">
+    <a href="{{ url_for('home') }}" class="backbutton"> 
+        <span class="backbuttontext">&lt;-</span>
+    </a>
+
+    <div class="info-layout">
+        <div class = "maintext1"> 
+            <div class="title11"> How to </div>
+            <div class="title12"> Budget your Money </div>
+            <div class="subtitle1">Create a budget that actually works for you, with personalized tips based on your income and spending habits.</div>
+        </div>
+
+        <a href="{{ url_for('quiz') }}" class="quizbutton"> 
+            <span class="quizbuttontext">Quiz -></span>
+        </a>
+    </div>
+
+    <div class="box1">
+       
+
 </body>
 </html>

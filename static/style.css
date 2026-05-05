@@ -17,7 +17,7 @@ body.home-page {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    left: 12%;
+    left: 10%;
     text-align: left;
     width: 40%;
 }
@@ -28,7 +28,7 @@ body.home-page {
     font-size: 70px;
     color: #fff1ec;
     line-height: 80px;
-    margin-bottom: 10px;
+    margin-bottom: 75px;
 }
 
 .subtitle {
@@ -42,7 +42,7 @@ body.home-page {
 .topbox {
     position: fixed;
     top: 10%;
-    right: 12%;
+    right: 10%;
     background-color: #FFF1EC;
     height: 24%;
     width: 21%;
@@ -67,7 +67,7 @@ body.home-page {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    right: 12%;
+    right: 10%;
     background-color: #FFF1EC;
     height: 24%;
     width: 21%;
@@ -91,7 +91,7 @@ body.home-page {
 .bottombox {
     position: fixed;
     bottom: 10%;
-    right: 12%;
+    right: 10%;
     background-color: #FFF1EC;
     height: 24%;
     width: 21%;
@@ -132,7 +132,6 @@ body.home-page {
     line-height: 20px;
 }
 
-/* Link-Styling für die Boxes entfernen */
 .topbox,
 .middlebox,
 .bottombox {
@@ -144,4 +143,120 @@ body.home-page {
 .middlebox:visited,
 .bottombox:visited {
     color: inherit;
+}
+
+/* Page 1 Information */
+
+body.info-page {
+    margin: 0;
+    padding: 0;
+    background-image: url("BGL.PNG"); 
+    height: 100%;    
+    width: 100%; 
+    background-position: center;   
+    background-repeat: no-repeat; 
+}
+
+.backbutton {
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    text-decoration: none;
+    transition: transform 0.5s ease;
+}
+
+.backbuttontext {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: #ec7790;
+}
+
+.backbutton:hover {
+    transform: scale(1.3); 
+}
+
+.info-layout {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.maintext1 {
+    text-align: left;
+    width: 100%;
+}
+
+.title11 {
+    font-family: 'Poppins', serif;
+    font-weight: 200;
+    font-size: 60px;
+    color: #ec7790;
+    line-height: 80px;
+}
+
+.title12 {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: #ec7790;
+    line-height: 80px;
+    margin-bottom: 35px;
+   
+}
+
+.subtitle1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: #ec7790;
+    width: 80%;
+    margin-bottom: 35px;
+}
+
+.quizbutton {
+    background-color: #81d4c4;
+    height: 70px;
+    width: 120px;
+    padding: 0 24px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 5px 10px 15px #e9d1c9;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.quizbuttontext {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #FFF1EC;
+}
+
+.quizbutton:hover {
+    transform: scale(1.1); 
+}
+
+.box1 {
+    position: fixed;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    background-color: #FFF1EC;
+    height: 24%;
+    width: 21%;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    box-shadow: 5px 10px 15px #e9d1c9;
 }
