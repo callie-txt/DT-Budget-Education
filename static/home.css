@@ -1,0 +1,146 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body.home-page {
+    margin: 0;
+    padding: 0;
+    background-image: url("BGD.PNG"); 
+    height: 100%;    
+    width: 100%; 
+    background-position: center;   
+    background-repeat: no-repeat; 
+}
+
+.maintext {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    text-align: left;
+    width: 40%;
+}
+
+.title {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: #fff1ec;
+    line-height: 80px;
+    margin-bottom: 75px;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: #fff1ec;
+}
+
+
+.topbox {
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    background-color: #FFF1EC;
+    height: 24%;
+    width: 21%;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    box-shadow: 5px 10px 15px #e27e71;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.topbox:hover {
+    transform: translateX(-30px);
+}
+
+.middlebox {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    background-color: #FFF1EC;
+    height: 24%;
+    width: 21%;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    box-shadow: 5px 10px 15px #e28671;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.middlebox:hover {
+    transform: translateY(-50%) translateX(-30px);
+}
+
+.bottombox {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    background-color: #FFF1EC;
+    height: 24%;
+    width: 21%;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    box-shadow: 5px 10px 15px #e28d71;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.bottombox:hover {
+    transform: translateX(-30px);
+}
+
+.tbtitle,
+.mbtitle,
+.bbtitle {
+    display: block;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 45px;
+    color: #ec7790;
+    line-height: 40px;
+    margin-bottom: 10px;
+    line-height: 47px;
+}
+
+.tbsubtitle,
+.mbsubtitle,
+.bbsubtitle {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: #ec7790;
+    line-height: 20px;
+}
+
+.topbox,
+.middlebox,
+.bottombox {
+    text-decoration: none;
+    color: inherit;
+}
+
+.topbox:visited,
+.middlebox:visited,
+.bottombox:visited {
+    color: inherit;
+}
