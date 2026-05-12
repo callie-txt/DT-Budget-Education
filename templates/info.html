@@ -25,19 +25,24 @@
     </div>
 
     <div class="box">
-        <h2 id="boxtitle">Click a number</h2>
-        <p id="boxtext"></p>
+        <h2 class="boxtitle" id="boxtitle">Click a number</h2>
+        <p class= boxtext id="boxtext"></p>
 
-        <button onclick="show(1)">1</button>
-        <button onclick="show(2)">2</button>
-        <button onclick="show(3)">3</button>
-        <button onclick="show(4)">4</button>
-        <button onclick="show(5)">5</button>
-        <button onclick="show(6)">6</button>
-        <button onclick="show(7)">7</button>
-        <button onclick="show(8)">8</button>
+        <div class="button-container">
+            <div class="line"> </div>
+            <button class="button" onclick="show(1)">1</button>
+            <button class="button" onclick="show(2)">2</button>
+            <button class="button" onclick="show(3)">3</button>
+            <button class="button" onclick="show(4)">4</button>
+            <button class="button" onclick="show(5)">5</button>
+            <button class="button" onclick="show(6)">6</button>
+            <button class="button" onclick="show(7)">7</button>
+            <button class="button" onclick="show(8)">8</button>
+            
+        </div>
     </div>
 
+   
 
     <script src="{{ url_for('static', filename='info.js') }}"></script>
        

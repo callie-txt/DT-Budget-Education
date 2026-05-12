@@ -99,7 +99,7 @@ body.info-page {
 }
 
 .quizbutton:hover {
-    transform: scale(1.1); 
+    transform: scale(1.05); 
 }
 
 .box {
@@ -110,9 +110,65 @@ body.info-page {
     height: 70%;
     width: 25%;
     border-radius: 20px;
-    padding: 20px;
+    padding: 14px 20px 20px 20px;
     text-align: right;
     box-shadow: 5px 10px 15px #e9d1c9;
     background-image: url("BGD.PNG");
     background-size: cover;
+}
+
+.boxtitle {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFF1EC;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+.boxtext {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 21px;
+    color: #FFF1EC;
+    width: 100%;
+    text-align: left;
+}
+
+.button-container {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 7.5px;
+}
+
+.button {
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color:#FFF1EC;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.line {
+    position: absolute;
+    left: 50%;
+    top: -40%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #FFF1EC;
 }
