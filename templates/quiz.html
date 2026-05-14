@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>...</title>
 </head>
-<body>
-    <a href="{{ url_for('home') }}">Zurück zur Startseite</a>
-   <div>Quiz / Calculator</div>
+<body class="quiz-page">
+    <a href="{{ url_for('information') }}" class="backbutton"> 
+        <span class="backbuttontext">&lt;-</span>
+    </a>
+
+    <div class = "maintext"> 
+        <div class="title"> Quiz </div>
+        <div class="subtitle">Create a budget that actually works for you, with personalized tips based on your income and spending habits.</div>
+    </div>
+    
+    <div class="box">
+        <div class="line"> </div>
+    </div>
+   
 </body>
 </html>

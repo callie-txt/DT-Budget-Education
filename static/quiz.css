@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body.quiz-page {
+    margin: 0;
+    padding: 0;
+    background-image: url("BGD.PNG"); 
+    height: 100%;    
+    width: 100%; 
+    background-position: center;   
+    background-repeat: no-repeat; 
+}
+
+.backbutton {
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    text-decoration: none;
+    transition: transform 0.5s ease;
+}
+
+.backbuttontext {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: #fff1ec;
+}
+
+.backbutton:hover {
+    transform: scale(1.3); 
+}
+
+
+.maintext {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    text-align: right;
+    width: 35%;
+}
+
+.title {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: #fff1ec;
+    line-height: 80px;
+    margin-bottom: 75px;
+}
+
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: #fff1ec;
+}
+
+
+.box {
+    background-color: #FFF1EC;
+    box-shadow: 5px 10px 15px #de6d6d;
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    height: 40%;
+    width: 25%;
+    border-radius: 20px;
+}
+
+.line {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 2px;
+    background-color: #ec7790;
+}
