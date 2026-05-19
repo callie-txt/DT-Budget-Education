@@ -19,28 +19,18 @@
         </div>
     </div>
 
+    <div class="box">
 
-<div class="box">
-  <div id="question"></div>
+        <div id="question"></div>
 
-  <button onclick="answer('yes')">Yes</button>
-  <button onclick="answer('no')">No</button>
-</div>
+        <button onclick="answer('yes')">Yes</button>
 
-<script>
-const questions = [
-  {q: "Do you know what budgeting is?", a: "yes"},
-  {q: "Is HTML a programming language?", a: "no"},
-  {q: "Is CSS used for styling?", a: "yes"},
-  {q: "Does 2 + 2 = 5?", a: "no"},
-  {q: "Is water dry?", a: "no"},
-  {q: "Is Python a snake only?", a: "no"},
-  {q: "Is Earth a planet?", a: "yes"},
-  {q: "Does the sun rise in the west?", a: "no"}
-];
-</script>
+        <button onclick="answer('no')">No</button>
 
+    </div>
 
+    <script src="{{ url_for('static', filename='quiz.js') }}"></script>
 
 </body>
+
 </html>
