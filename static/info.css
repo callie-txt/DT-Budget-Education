@@ -157,6 +157,7 @@ body.info-page {
     color:#FFF1EC;
     border: none;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .button:hover {

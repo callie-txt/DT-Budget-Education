@@ -58,7 +58,6 @@ body.quiz-page {
     color: #fff1ec;
 }
 
-
 .box {
     background-color: #FFF1EC;
     box-shadow: 5px 10px 15px #de6d6d;
@@ -79,4 +78,29 @@ body.quiz-page {
     width: 90%;
     height: 2px;
     background-color: #ec7790;
+}
+
+.question {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 21px;
+    color: #ec7790;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+}
+
+.answer {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 21px;
+    color: #ec7790;
+    width: 100%;
+    text-align: center;
+    top: 30%;
+}
+
+.answerhover {
+    color: #de6d6d;
+    cursor: pointer;
 }
