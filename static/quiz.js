@@ -30,8 +30,14 @@ function answer(userAnswer) {
     if (currentQuestion < questions.length) {
         showQuestion();
     } else {
-        let resultText = "Quiz finished! ";
-            wrongText += "You answered the following question numbers incorrectly: " + wrongQuestions.join(", ");
-            document.getElementById("question").innerHTML = resultText; 
+        let resultText= " ";
+
+        if (wrongQuestions.length > 0) {
+            resultText += "We recommend the articles: " + wrongQuestions.join(", ");
+        } else {
+            resultText += "No recommended articles.";
         }
+
+        document.getElementById("question").innerHTML = resultText;
     }
+}

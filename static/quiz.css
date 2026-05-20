@@ -70,6 +70,16 @@ body.quiz-page {
     border-radius: 20px;
 }
 
+.indicator {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #ec7790;
+}
+
 .line {
     position: absolute;
     left: 50%;
@@ -81,26 +91,59 @@ body.quiz-page {
 }
 
 .question {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    font-size: 21px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 35%;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 30px;
     color: #ec7790;
-    width: 100%;
+    width: 90%;
     text-align: center;
-    top: 20%;
+    font-weight: bold;
 }
 
-.answer {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    font-size: 21px;
-    color: #ec7790;
-    width: 100%;
-    text-align: center;
-    top: 30%;
-}
 
-.answerhover {
-    color: #de6d6d;
+.Ybutton {
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    height: 15%;
+    width: 30%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff1ec;
+    background-color: #ec7790;
+    border: none;
+    border-radius: 15px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 5px 10px 15px #e9d1c9;
+}
+
+.Ybutton:hover {
+    transform: scale(1.05); 
+}
+
+.Nbutton {
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+    height: 15%;
+    width: 30%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff1ec;
+    background-color: #ec7790;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 5px 10px 15px #e9d1c9;
+}
+
+.Nbutton:hover {
+    transform: scale(1.05); 
 }
