@@ -10,6 +10,7 @@ const questions = [
 ];
 
 let currentQuestion = 0;
+let wrongQuestions = [];
 
 function showQuestion() {
     document.getElementById("question").innerHTML =
@@ -19,12 +20,18 @@ function showQuestion() {
 showQuestion();
 
 function answer(userAnswer) {
+    const correct = questions[currentQuestion].a;
+    if (userAnswer !== correct) {
+        wrongQuestions.push(currentQuestion); 
+    }
+
     currentQuestion++;
-    
+
     if (currentQuestion < questions.length) {
         showQuestion();
     } else {
-        document.getElementById("question").innerHTML = "Quiz finished!";
+        let resultText = "Quiz finished! ";
+            wrongText += "You answered the following question numbers incorrectly: " + wrongQuestions.join(", ");
+            document.getElementById("question").innerHTML = resultText; 
+        }
     }
-}
-
