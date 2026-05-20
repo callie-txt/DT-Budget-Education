@@ -18,3 +18,13 @@ function showQuestion() {
 
 showQuestion();
 
+function answer(userAnswer) {
+    currentQuestion++;
+    
+    if (currentQuestion < questions.length) {
+        showQuestion();
+    } else {
+        document.getElementById("question").innerHTML = "Quiz finished!";
+    }
+}
+
