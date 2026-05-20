@@ -1,12 +1,13 @@
 
 const questions = [
     { q: "Do you know what budgeting is?", a: "yes" },
-    { q: "Is HTML a programming language?", a: "no" },
-    { q: "Is CSS used for styling?", a: "yes" },
-    { q: "Does 2 + 2 = 5?", a: "no" },
-    { q: "Is water dry?", a: "no" },
-    { q: "Is Earth a planet?", a: "yes" },
-    { q: "Does the sun rise in the west?", a: "no" }
+    { q: "Is your income irregular?", a: "no" },
+    { q: "Do you feel like you spend too much money?", a: "no" },
+    { q: "Do you know where your money goes?", a: "yes" },
+    { q: "Do you currently save money?", a: "yes" },
+    { q: "Do you have a specific savings goal?", a: "yes" },
+    { q: "Do you sometimes run out of money?", a: "no" },
+    { q: "Do you plan your spending in advance?", a: "yes" },
 ];
 
 let currentQuestion = 0;
