@@ -7,8 +7,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Income Smoothing Calculator</title>
 </head>
-<body>
-    <a href="{{ url_for('home') }}">Zurück zur Startseite</a>
-    <div>Income Smoothing Calculator</div>
+<body class="income-page">
+     <a href="{{ url_for('home') }}" class="backbutton"> 
+        <span class="backbuttontext">&lt;-</span>
+    </a>
+    
+    <div class = "maintext"> 
+        <div class="title1"> Income Smoothing </div>
+        <div class="title2"> Calculator </div>
+        <div class="subtitle">Use your past income to calculate a personalized amount you can safely spend.</div>
+    </div>
+
+    <div class="box"></div>
+    
 </body>
 </html>

@@ -7,8 +7,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Saving Goal Calculator</title>
 </head>
-<body>
-    <a href="{{ url_for('home') }}">Zurück zur Startseite</a>
-    <div>Saving Goal Calculator</div>
+<body class="goal-page">
+     <a href="{{ url_for('home') }}" class="backbutton"> 
+        <span class="backbuttontext">&lt;-</span>
+    </a>
+
+    <div class = "maintext"> 
+        <div class="title1"> Saving Goal </div>
+        <div class="title2"> Calculator </div>
+        <div class="subtitle">Plan your savings goal, timeframe, or saving amount - enter any two and get a personalized result instantly.</div>
+    </div>
+
+    <div class="box"></div>
+    
 </body>
 </html>
