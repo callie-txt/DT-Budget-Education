@@ -34,11 +34,10 @@ function answer(userAnswer) {
         let resultText= " ";
 
         if (wrongQuestions.length > 0) {
-            resultText += "We recommend the articles: " + wrongQuestions.join(", ");
+            resultText += "We recommend the articles: " + wrongQuestions.map(q => q + 1).join(", ");
         } else {
             resultText += "No recommended articles.";
         }
-
         document.getElementById("question").innerHTML = resultText;
     }
 }
