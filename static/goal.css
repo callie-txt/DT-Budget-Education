@@ -65,17 +65,69 @@ body.goal-page {
     color: #fff1ec;
 }
 
-.box {
-    position: fixed;
+.calculatorbox {    position:fixed;
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
-    height: 70%;
     width: 25%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5%;
+}
+
+.boxtop,
+.boxmiddle,
+.boxbottom {
+    height: 21.6666%;
+    width: 100%;
+    background: #fff1ec;
     border-radius: 20px;
-    padding: 14px 20px 20px 20px;
-    text-align: right;
-    box-shadow: 5px 10px 15px #d3717b;
-    background-image: url("BGL.PNG");
-    background-size: cover;
+    box-shadow: 5px 10px 15px #de6d6d;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 16px;
+    gap: 12px;
+}
+
+.goalbutton {
+    height: 10%;
+    width: 35%;
+    align-self: center;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff1ec;
+    color: #81d4c4;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    cursor: pointer;
+    box-shadow: 5px 10px 15px #de6d6d;
+    transition: transform 0.4s ease;
+}
+
+.goalbutton:hover {
+    transform: scale(1.05);
+}
+
+.boxtext {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    color: #ec7790;
+}
+
+.boxinput {
+    width: 80%;
+    height: 38px;
+    border: none;
+    border-radius: 12px;
+    padding: 0 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #81d4c4;
+    box-sizing: border-box;
 }
