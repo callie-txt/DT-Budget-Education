@@ -21,20 +21,41 @@
     <div class="calculatorbox"> 
         <div class="boxtop">
             <span class="boxtext">Saving Goal</span>
-            <input class="boxinput" type="text">
+            <input id="goal"class="boxinput" type="text">
         </div>
         <div class="boxmiddle">
             <span class="boxtext">Saving Amount per Week</span>
-            <input class="boxinput" type="text">
+            <input id="amount" class="boxinput" type="text">
         </div>
         <div class="boxbottom">
             <span class="boxtext">Weeks</span>
-            <input class="boxinput" type="text">
+            <input id="weeks" class="boxinput" type="text">
         </div>
-        <button class="goalbutton" type="button">Enter</button>
+        <button class="goalbutton" type="button" onclick="calculategoal()">Enter</button>
 
     </div>
 
+    <script>
+
+function calculategoal() {
+    let goal = document.getElementById("goal").value;
+    let amount = document.getElementById("amount").value;
+    let weeks = document.getElementById("weeks").value;
+
+    if ( weeks == "") {
+        weeks = Math.ceil(goal / amount);
+        document.getElementById("weeks").value = weeks;
+    } else if (amount == "") {
+        amount = Math.ceil(goal / weeks);
+        document.getElementById("amount").value = amount;
+    } else if (goal == "") {
+        goal = amount * weeks;
+        document.getElementById("goal").value = goal;
+    } else {
+        alert("Please enter at least two values to calculate the third.");
+    }
+}
+    </script>
    
     
 </body>
