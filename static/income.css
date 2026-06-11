@@ -74,8 +74,61 @@ body.income-page {
     width: 25%;
     border-radius: 20px;
     padding: 14px 20px 20px 20px;
-    text-align: right;
     box-shadow: 5px 10px 15px #e9d1c9;
     background-image: url("BGD.PNG");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.income-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 70%;
+}
+
+.boxtitel {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    color: #fff1ec;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 130%;
+}
+
+.input {
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-radius: 12px;
+    padding: 0 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #81d4c4; 
+    background-color: #fff1ec;
+}
+
+.button {
+    height: 50px;
+    width: 50%;
+    align-self: center;
+    border: none;
+    border-radius: 12px;
+    background-color: #fff1ec;
+    color: #81d4c4;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    cursor: pointer;
+    box-shadow: 5px 10px 15px #de6d6d;
+    transition: transform 0.4s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
 }
