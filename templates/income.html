@@ -28,11 +28,29 @@
             <input class="input" type="number" id="week3" >
             <input class="input" type="number" id="week4" >
 
-            <button class="button" onclick="calculate()">Enter</button>
+            <button class="button" onclick="calculateincome()">Enter</button>
 
             </div>
         </div>
     </div>
     
+
+    <script>
+
+function calculateincome() {
+    let week1 = parseFloat(document.getElementById("week1").value);
+    let week2 = parseFloat(document.getElementById("week2").value);
+    let week3 = parseFloat(document.getElementById("week3").value);
+    let week4 = parseFloat(document.getElementById("week4").value); 
+
+    let totalIncome = week1 + week2 + week3 + week4;
+    let averageIncome = totalIncome / 4 * 0.85;
+
+    alert("Your average weekly income is: $" + averageIncome.toFixed(2));
+}
+   
+    </script>
+
+
 </body>
 </html>
