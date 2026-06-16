@@ -30,6 +30,8 @@
 
             <button class="button" onclick="calculateincome()">Enter</button>
 
+            <div class="calcanswer" >You can spend  <span class="number" id="calcanswer">_____</span> safely each week.</div>
+
             </div>
         </div>
     </div>
@@ -44,9 +46,9 @@ function calculateincome() {
     let week4 = parseFloat(document.getElementById("week4").value); 
 
     let totalIncome = week1 + week2 + week3 + week4;
-    let averageIncome = totalIncome / 4 * 0.85;
+    let calcanswer = totalIncome / 4 * 0.85;
 
-    alert("Your average weekly income is: $" + averageIncome.toFixed(2));
+    document.getElementById("calcanswer").textContent = "$" + calcanswer.toFixed(2);
 }
    
     </script>
