@@ -87,14 +87,14 @@ body.income-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     width: 70%;
 }
 
 .boxtitel {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    font-size: 25px;
+    font-size: 23px;
     color: #fff1ec;
     margin-bottom: 10px;
     text-align: center;
@@ -136,7 +136,7 @@ body.income-page {
 .calcanswer {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    font-size: 25px;
+    font-size: 23px;
     color: #fff1ec;
     margin-bottom: 10px;
     text-align: center;

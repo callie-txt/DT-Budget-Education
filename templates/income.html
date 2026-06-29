@@ -37,21 +37,33 @@
     </div>
     
 
-    <script>
+   <script>
 
 function calculateincome() {
-    let week1 = parseFloat(document.getElementById("week1").value);
-    let week2 = parseFloat(document.getElementById("week2").value);
-    let week3 = parseFloat(document.getElementById("week3").value);
-    let week4 = parseFloat(document.getElementById("week4").value); 
+
+    let week1 = document.getElementById("week1").value;
+    let week2 = document.getElementById("week2").value;
+    let week3 = document.getElementById("week3").value;
+    let week4 = document.getElementById("week4").value;
+
+    if (week1 === "" || week2 === "" || week3 === "" || week4 === "") {
+        alert("Please fill in all four weeks of income to get an accurate calculation.");
+        return;
+    }
+
+    week1 = parseFloat(week1);
+    week2 = parseFloat(week2);
+    week3 = parseFloat(week3);
+    week4 = parseFloat(week4);
 
     let totalIncome = week1 + week2 + week3 + week4;
-    let calcanswer = totalIncome / 4 * 0.85;
+    let calcanswer = (totalIncome / 4) * 0.85;
 
-    document.getElementById("calcanswer").textContent = "$" + calcanswer.toFixed(2);
+    document.getElementById("calcanswer").textContent =
+        "$" + calcanswer.toFixed(2);
 }
-   
-    </script>
+
+</script>
 
 
 </body>

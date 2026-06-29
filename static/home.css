@@ -3,7 +3,7 @@ html, body {
     margin: 0;
 }
 
-body.home-page {
+.home-page {
     margin: 0;
     padding: 0;
     background-image: url("BGD.PNG"); 
