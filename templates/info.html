@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='info.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Budget Education</title>
 </head>
@@ -12,17 +13,16 @@
         <span class="backbuttontext">&lt;-</span>
     </a>
 
-    <div class="info-layout">
-        <div class = "maintext"> 
-            <div class="title1"> How to </div>
-            <div class="title2"> Budget your Money </div>
-            <div class="subtitle">Create a budget that actually works for you, with personalized tips based on your income and spending habits.</div>
-        </div>
-
+    <div class = "maintext"> 
+        <div class="title1"> How to </div>
+        <div class="title2"> Budget your Money </div>
+        <div class="subtitle">Create a budget that actually works for you, with personalized tips based on your income and spending habits.</div>
         <a href="{{ url_for('quiz') }}" class="quizbutton"> 
             <span class="quizbuttontext">Quiz -></span>
         </a>
-    </div>
+     </div>
+
+        
 
     <div class="box">
         <h2 class="boxtitle" id="boxtitle">Click a number</h2>
