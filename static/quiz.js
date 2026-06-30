@@ -12,7 +12,7 @@ const questions = [
 
 let currentQuestion = 0;
 let wrongQuestions = [];
-const totalQuestions = 8;
+const totalQuestions = questions.length;
 
 function showQuestion() {
     document.getElementById("question-counter").innerHTML = `${currentQuestion + 1}/${totalQuestions}`;
