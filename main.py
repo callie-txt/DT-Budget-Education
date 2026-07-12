@@ -43,9 +43,34 @@ def goal():
         weeks=weeks,
     )
 
-@app.route('/income')
+@app.route('/income', methods=['GET', 'POST'])
 def income():
-    return render_template('income.html')
+    week1 = ''
+    week2 = ''
+    week3 = ''
+    week4 = ''
+    amount = '_____'
+    if request.method == 'POST':
+        week1_text = request.form.get('week1', '').strip()
+        week2_text = request.form.get('week2', '').strip()
+        week3_text = request.form.get('week3', '').strip()
+        week4_text = request.form.get('week4', '').strip()
+
+        week1 = int(week1_text) if week1_text else 0
+        week2 = int(week2_text) if week2_text else 0
+        week3 = int(week3_text) if week3_text else 0
+        week4 = int(week4_text) if week4_text else 0
+
+        totalincome = week1 + week2 + week3 + week4
+        amount = round((totalincome / 4) * 0.85, 2)
+
+    return render_template(
+        'income.html',
+        week1=week1,
+        week2=week2,
+        week3=week3,
+        week4=week4, 
+        amount=amount,)
 
 @app.route('/quiz')
 def quiz():

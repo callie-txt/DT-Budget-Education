@@ -19,52 +19,23 @@
         <div class="subtitle">Use your past income to calculate a personalized amount you can safely spend.</div>
     </div>
 
-    <div class="box">
+    <form class="box" action="{{ url_for('income') }}" method="post">
         <div class="income-inputs">
             
             <div class="boxtitel">How much have you earned in the last 4 weeks?</div>
             
-            <input class="input" type="number" id="week1" >
-            <input class="input" type="number" id="week2" > 
-            <input class="input" type="number" id="week3" >
-            <input class="input" type="number" id="week4" >
+            <input class="input" type="number" id="week1" name="week1" value="{{ week1 }}" min="0" >
+            <input class="input" type="number" id="week2" name="week2" value="{{ week2 }}" min="0" > 
+            <input class="input" type="number" id="week3" name="week3" value="{{ week3 }}" min="0" >
+            <input class="input" type="number" id="week4" name="week4" value="{{ week4 }}" min="0" >
 
-            <button class="button" onclick="calculateincome()">Enter</button>
+            <button class="button" type="submit">Enter</button>
 
-            <div class="calcanswer" >You can spend  <span class="number" id="calcanswer">_____</span> safely each week.</div>
+            <div class="calcanswer" >You can spend  <span class="number">{{ amount }}</span> safely each week.</div>
 
-            </div>
         </div>
-    </div>
-    
+    </form>
 
-   <script>
-
-function calculateincome() {
-
-    let week1 = document.getElementById("week1").value;
-    let week2 = document.getElementById("week2").value;
-    let week3 = document.getElementById("week3").value;
-    let week4 = document.getElementById("week4").value;
-
-    if (week1 === "" || week2 === "" || week3 === "" || week4 === "") {
-        alert("Please fill in all four weeks of income to get an accurate calculation.");
-        return;
-    }
-
-    week1 = parseFloat(week1);
-    week2 = parseFloat(week2);
-    week3 = parseFloat(week3);
-    week4 = parseFloat(week4);
-
-    let totalIncome = week1 + week2 + week3 + week4;
-    let calcanswer = (totalIncome / 4) * 0.85;
-
-    document.getElementById("calcanswer").textContent =
-        "$" + calcanswer.toFixed(2);
-}
-
-</script>
 
 
 </body>
