@@ -6,9 +6,46 @@ app= Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/information')
+@app.route('/information', methods=['GET', 'POST'])
 def information():
-    return render_template('info.html')
+    boxtitle = 'Click a nuber to read an article or click the quiz button to start the quiz'
+    boxtext = ''
+
+    if request.method == 'POST':
+        number = request.form.get('number', '').strip()
+        if number == "1":
+            boxtitle = "Budgeting basics - income and expense."
+            boxtext = "Budgeting means planning how you use your money. It’s about knowing how much you earn and deciding in advance how much you can spend and save. A simple budget helps you avoid running out of money and gives you a clear overview of your finances."
+        elif number == "2":
+            boxtitle = "Income smoothing helps with irregular income"
+            boxtext = "If your income changes from week to week you could try Income Smoothing. It works by calculating an average income and base your spending on that. You can check out the Income-Smoothing-Calculator to find out what might work for you."
+        elif number == "3":
+            boxtitle = "Avoid overspending by tracking habits."
+            boxtext = "Overspending often happens without noticing. Small daily expenses add up quickly. Becoming aware of your spending habits is the first step to controlling them and making better financial decisions."
+        elif number == "4":
+            boxtitle = "Track every dollar you spend."
+            boxtext = "Tracking your expenses means writing down or recording everything you spend. This helps you understand where your money goes and identify areas where you can cut back."
+        elif number == "5":
+            boxtitle = "Saving regularly builds financial security."
+            boxtext = "Saving regularly, even small amounts, builds financial stability over time. It helps you prepare for unexpected expenses and reduces financial stress in the long run"
+        elif number == "6":
+            boxtitle = "Set clear financial goals."
+            boxtext = "Saving regularly, even small amounts, builds financial stability over time. It helps you prepare for unexpected expenses and reduces financial stress in the long run."
+        elif number == "7":
+            boxtitle = "Consistency is key in budgeting."
+            boxtext = "Creating a budget is one thing, but sticking to it is what really matters. Consistency helps you build better habits and stay in control of your finances over time."
+        elif number == "8":
+            boxtitle = "Control your money, don't let it control you."
+            boxtext = "Being in control of your money means making intentional decisions about spending and saving. When you understand your finances, you feel more confident and less stressed about money."
+        else:
+            boxtitle = 'Click a nuber to read an article or click the quiz button to start the quiz'
+            boxtext = ''
+
+    return render_template(
+        'info.html',
+        boxtitle=boxtitle,
+        boxtext=boxtext
+    )
 
 @app.route('/goal', methods=['GET', 'POST'])
 def goal():
