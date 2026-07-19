@@ -16,22 +16,44 @@
     <div class = "maintext"> 
         <div class="title1"> Saving Goal </div>
         <div class="title2"> Calculator </div>
-        <div class="subtitle">Plan your savings goal, timeframe, or saving amount - enter any two and get a personalized result instantly.</div>
+        <div class="subtitle">Plan your savings goal, timeframe, or weekly savings amount. Choose your account type and see how interest can help you reach your goal faster.</div>
     </div>
 
     <form class="calculatorbox" action="{{ url_for('goal') }}" method="post">
-        <div class="boxtop">
+
+        <div class="boxone">
             <span class="boxtext">Saving Goal</span>
             <input id="goal" name="goal" class="boxinput" type="number" min="0" step="any" value="{{ goal }}">
         </div>
-        <div class="boxmiddle">
+        <div class="boxtwo">
             <span class="boxtext">Saving Amount per Week</span>
             <input id="amount" name="amount" class="boxinput" type="number" min="0" step="any" value="{{ amount }}">
         </div>
-        <div class="boxbottom">
+        <div class="boxthree">
             <span class="boxtext">Weeks</span>
             <input id="weeks" name="weeks" class="boxinput" type="number" min="0" step="any" value="{{ weeks }}">
         </div>
+
+        <div class="boxfour">
+            <span class="boxtext">Account Type</span>
+            <div class="radiogroup">
+                <label class="radiooption">
+                    <input type="radio" name="account_type" value="everyday" checked>
+                    Everyday Account (0.1%)
+                </label>
+                <label class="radiooption">
+                    <input type="radio" name="account_type" value="savings">
+                    Savings Account (1.5%)
+                </label>
+                <label class="radiooption">
+                    <input type="radio" name="account_type" value="deposit">
+                    Deposit (3.0%)
+                </label>
+            </div>
+           
+
+        </div>
+
         <button class="goalbutton" type="submit">Enter</button>
 
     </form>

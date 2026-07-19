@@ -80,6 +80,8 @@ def goal():
         weeks=weeks,
     )
 
+# plus the extention of the calculator #
+
 @app.route('/income', methods=['GET', 'POST'])
 def income():
     week1 = ''
