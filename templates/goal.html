@@ -38,15 +38,15 @@
             <span class="boxtext">Account Type</span>
             <div class="radiogroup">
                 <label class="radiooption">
-                    <input type="radio" name="account_type" value="everyday" checked>
+                    <input type="radio" name="account_type" value="everyday" {% if account_type == 'everyday' %}checked{% endif %}>
                     Everyday Account (0.1%)
                 </label>
                 <label class="radiooption">
-                    <input type="radio" name="account_type" value="savings">
+                    <input type="radio" name="account_type" value="savings" {% if account_type == 'savings' %}checked{% endif %}>
                     Savings Account (1.5%)
                 </label>
                 <label class="radiooption">
-                    <input type="radio" name="account_type" value="deposit">
+                    <input type="radio" name="account_type" value="deposit" {% if account_type == 'deposit' %}checked{% endif %}>
                     Deposit (3.0%)
                 </label>
             </div>

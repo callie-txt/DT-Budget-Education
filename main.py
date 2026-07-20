@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+import math
 app= Flask(__name__)
 
 @app.route('/')
@@ -48,39 +48,59 @@ def information():
     )
 
 @app.route('/goal', methods=['GET', 'POST'])
+
 def goal():
+
     goal = ''
     amount = ''
     weeks = ''
+    interest = 0.001
+    account_type = 'everyday'
 
     if request.method == 'POST':
         goal_text = request.form.get('goal', '').strip()
         amount_text = request.form.get('amount', '').strip()
         weeks_text = request.form.get('weeks', '').strip()
+        account_type = request.form.get('account_type', 'everyday').strip()
 
-        goal = int(goal_text) if goal_text else ''
-        amount = int(amount_text) if amount_text else ''
+        if account_type == "everyday":
+            interest = 0.001   
+        elif account_type == "savings":
+            interest = 0.015   
+        elif account_type == "deposit":
+            interest = 0.03    
+        interest = interest / 52
+
+        goal = float(goal_text) if goal_text else ''
+        amount = float(amount_text) if amount_text else ''
         weeks = int(weeks_text) if weeks_text else ''
 
         if goal == '' and amount != '' and weeks != '':
-            goal = amount * weeks
+            goal = amount * (((1 + interest) ** weeks) - 1) / interest
+            goal = round(goal, 2)
+
         elif amount == '' and goal != '' and weeks != '':
-            amount = goal // weeks
+            amount = (goal * interest) / (((1 + interest) ** weeks) - 1)
+            amount = round(amount, 2)
+
         elif weeks == '' and goal != '' and amount != '':
-            weeks = goal // amount
-        else:
-            goal = ''
-            amount = ''
-            weeks = ''
+            weeks = math.log((goal * interest / amount) + 1) / math.log(1 + interest)
+            weeks = math.ceil(weeks)
+
+    else:
+        goal = ''
+        amount = ''
+        weeks = ''
+            
 
     return render_template(
         'goal.html',
         goal=goal,
         amount=amount,
         weeks=weeks,
+        interest=interest,
+        account_type=account_type
     )
-
-# plus the extention of the calculator #
 
 @app.route('/income', methods=['GET', 'POST'])
 def income():
@@ -89,6 +109,7 @@ def income():
     week3 = ''
     week4 = ''
     amount = '_____'
+
     if request.method == 'POST':
         week1_text = request.form.get('week1', '').strip()
         week2_text = request.form.get('week2', '').strip()
