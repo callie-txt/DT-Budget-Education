@@ -77,10 +77,7 @@ def goal():
         amount = float(amount_text) if amount_text else ''
         weeks = int(weeks_text) if weeks_text else ''
 
-        if goal != '' and amount != '' and weeks != '':
-            error = "Please only fill in two fields. Leave one field empty to calculate it."
-
-        elif goal == '' and amount != '' and weeks != '':
+        if goal == '' and amount != '' and weeks != '':
             goal = amount * (((1 + interest) ** weeks) - 1) / interest
             goal = round(goal, 2)
 
