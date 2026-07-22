@@ -26,7 +26,7 @@ body.income-page {
     top: 50%;
     right: 10%;
     transform: translateY(-50%);
-    height: 70%;
+    height: 75%;
     width: 25%;
     border-radius: 20px;
     padding: 14px 20px 20px 20px;
@@ -43,18 +43,18 @@ body.income-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     width: 70%;
 }
 
 .boxtitel {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    font-size: 23px;
+    font-size: 20px;
     color: #fff1ec;
     margin-bottom: 10px;
     text-align: center;
-    width: 130%;
+    width: 145%;
 }
 
 .input {
@@ -70,8 +70,8 @@ body.income-page {
 }
 
 .button {
-    height: 50px;
-    width: 50%;
+    height: 40px;
+    width: 45%;
     align-self: center;
     border: none;
     border-radius: 12px;
@@ -79,10 +79,11 @@ body.income-page {
     color: #81d4c4;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 23px;
+    font-size: 20px;
     cursor: pointer;
     box-shadow: 5px 10px 15px #de6d6d;
     transition: transform 0.4s ease;
+    margin-bottom: 5px;
 }
 
 .button:hover {
@@ -92,12 +93,21 @@ body.income-page {
 .calcanswer {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    font-size: 23px;
+    font-size: 18px;
     color: #fff1ec;
-    margin-bottom: 10px;
     text-align: center;
     width: 130%;
 }   
+
+.stabilityanswer {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    color: #fff1ec;
+    margin-top: -5px;
+    text-align: center;
+    width: 145%;
+}
 
 .number{
     font-family: 'Poppins', sans-serif;

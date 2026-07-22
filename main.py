@@ -8,7 +8,7 @@ def home():
 
 @app.route('/information', methods=['GET', 'POST'])
 def information():
-    boxtitle = 'Click a nuber to read an article or click the quiz button to start the quiz'
+    boxtitle = 'Click a number to read an article or click the quiz button to start the quiz'
     boxtext = ''
 
     if request.method == 'POST':
@@ -56,6 +56,7 @@ def goal():
     weeks = ''
     interest = 0.001
     account_type = 'everyday'
+    error = ''
 
     if request.method == 'POST':
         goal_text = request.form.get('goal', '').strip()
@@ -68,14 +69,18 @@ def goal():
         elif account_type == "savings":
             interest = 0.015   
         elif account_type == "deposit":
-            interest = 0.03    
+            interest = 0.03
+        
         interest = interest / 52
 
         goal = float(goal_text) if goal_text else ''
         amount = float(amount_text) if amount_text else ''
         weeks = int(weeks_text) if weeks_text else ''
 
-        if goal == '' and amount != '' and weeks != '':
+        if goal != '' and amount != '' and weeks != '':
+            error = "Please only fill in two fields. Leave one field empty to calculate it."
+
+        elif goal == '' and amount != '' and weeks != '':
             goal = amount * (((1 + interest) ** weeks) - 1) / interest
             goal = round(goal, 2)
 
@@ -88,10 +93,11 @@ def goal():
             weeks = math.ceil(weeks)
 
     else:
+        
         goal = ''
         amount = ''
         weeks = ''
-            
+        error = ''
 
     return render_template(
         'goal.html',
@@ -99,16 +105,18 @@ def goal():
         amount=amount,
         weeks=weeks,
         interest=interest,
-        account_type=account_type
+        account_type=account_type,
+        error=error
     )
 
 @app.route('/income', methods=['GET', 'POST'])
 def income():
-    week1 = ''
-    week2 = ''
-    week3 = ''
-    week4 = ''
+    week1 = 0
+    week2 = 0
+    week3 = 0
+    week4 = 0
     amount = '_____'
+    stability = '_____'
 
     if request.method == 'POST':
         week1_text = request.form.get('week1', '').strip()
@@ -124,13 +132,31 @@ def income():
         totalincome = week1 + week2 + week3 + week4
         amount = round((totalincome / 4) * 0.85, 2)
 
+    incomes = [week1, week2, week3, week4]
+    changes = []
+
+    for i in range(1, len(incomes)):
+        difference = abs(incomes[i] - incomes[i-1])
+        changes.append(difference)
+    
+    average_change = sum(changes) / len(changes) if changes else 0
+
+    if average_change < 50:
+        stability = "Your income is stable. You can rely on your earnings and plan your spending confidently."
+    elif average_change < 150:
+        stability = "Your income is moderately stable. Consider saving extra money during higher income weeks."
+    else:
+        stability = "Your income is unstable. We recommend building an emergency buffer and avoiding relying on your highest income weeks."
+    
+
     return render_template(
         'income.html',
         week1=week1,
         week2=week2,
         week3=week3,
         week4=week4, 
-        amount=amount,)
+        amount=amount,
+        stability=stability)
 
 @app.route('/quiz')
 def quiz():
