@@ -25,6 +25,7 @@ body.info-page {
     background-color: #81d4c4;
     height: 70px;
     width: 120px;
+    margin-top: 24px;
     padding: 0 24px;
     border-radius: 20px;
     text-align: center;
