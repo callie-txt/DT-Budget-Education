@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='income.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="/static/income.css">
+    <link rel="stylesheet" href="/static/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Income Smoothing Calculator</title>
 </head>
 <body class="income-page">
-     <a href="{{ url_for('home') }}" class="backbutton"> 
+    <a href="/" class="backbutton"> 
         <span class="backbuttontext">&lt;-</span>
     </a>
     
@@ -19,7 +19,7 @@
         <div class="subtitle">Use your past income to calculate a personalized amount you can safely spend.</div>
     </div>
 
-    <form class="box" action="{{ url_for('income') }}" method="post">
+    <form class="box" action="/income" method="post">
         <div class="income-inputs">
             
             <div class="boxtitel">How much have you earned in the last 4 weeks?</div>

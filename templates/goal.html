@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='goal.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="/static/goal.css">
+    <link rel="stylesheet" href="/static/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Saving Goal Calculator</title>
 </head>
 <body class="goal-page">
-     <a href="{{ url_for('home') }}" class="backbutton"> 
+    <a href="/" class="backbutton"> 
         <span class="backbuttontext">&lt;-</span>
     </a>
 
@@ -19,7 +19,7 @@
         <div class="subtitle">Plan your savings goal, timeframe, or weekly savings amount. Choose your account type and see how interest can help you reach your goal faster.</div>
     </div>
 
-    <form class="calculatorbox" action="{{ url_for('goal') }}" method="post">
+    <form class="calculatorbox" action="/goal" method="post">
 
         <div class="boxone">
             <span class="boxtext">Saving Goal</span>

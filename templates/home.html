@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="/static/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Budget Education</title>
 </head>
@@ -13,17 +13,17 @@
         <div class="subtitle">Learn the basics of budgeting, manage irregular income, and reach your saving goals.</div>
     </div>
     
-    <a href="{{ url_for('information') }}" class="topbox"> 
+    <a href="/information" class="topbox"> 
         <span class="tbsubtitle">How to</span>
         <span class="tbtitle">Budget your Money</span>
     </a>
     
-    <a href="{{ url_for('goal') }}" class="middlebox"> 
-        <span class="mbtitle">Saving <br/> Goal</span>
+    <a href="/goal" class="middlebox"> 
+        <span class="mbtitle">Saving <br> Goal</span>
         <span class="mbsubtitle">Calculator</span>
     </a>
     
-    <a href="{{ url_for('income') }}" class="bottombox"> 
+    <a href="/income" class="bottombox"> 
         <span class="bbtitle">Income Smoothing</span>
         <span class="bbsubtitle">Calculator</span>
     </a>

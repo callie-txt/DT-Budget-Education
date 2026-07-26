@@ -122,7 +122,6 @@ body.goal-page {
 
 .radiooption input[type="radio"] {
     accent-color: #ec7790;
-    -webkit-appearance: none;
     appearance: none;
     width: 16px;
     height: 16px;

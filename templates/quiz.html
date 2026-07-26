@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="/static/quiz.css">
+    <link rel="stylesheet" href="/static/base.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body class="quiz-page">
-    <a href="{{ url_for('information') }}" class="backbutton"> 
+    <a href="/information" class="backbutton"> 
         <span class="backbuttontext">&lt;-</span>
     </a>
 
@@ -36,7 +37,7 @@
 
     </div>
 
-    <script src="{{ url_for('static', filename='quiz.js') }}"></script>
+    <script src="/static/quiz.js"></script>
 
 </body>
 
