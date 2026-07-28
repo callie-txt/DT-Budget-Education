@@ -18,6 +18,9 @@ function showQuestion() {
     document.getElementById("question-counter").innerHTML = `${currentQuestion + 1}/${totalQuestions}`;
     document.getElementById("question").innerHTML =
         questions[currentQuestion].q;
+    document.getElementById("yes-button").style.display = "block";
+    document.getElementById("no-button").style.display = "block";
+    document.getElementById("info-button").style.display = "none";
 }
 
 showQuestion();
@@ -40,6 +43,9 @@ function answer(userAnswer) {
         } else {
             resultText += "No recommended articles.";
         }
+
         document.getElementById("question").innerHTML = resultText;
+        document.getElementById("question-counter").innerHTML = `${totalQuestions}/${totalQuestions}`;
+        document.getElementById("info-button").style.display = "flex";
     }
 }
