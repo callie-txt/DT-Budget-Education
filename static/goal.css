@@ -1,5 +1,10 @@
-body.goal-page {
-    background-image: url("BGD.PNG"); 
+html {
+    height: 100%;
+    margin: 0;
+    background-image: url("BGD.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .backbutton {
