@@ -31,7 +31,7 @@ body.income-page {
 
 .maintext {
     position: fixed;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     width: 40%;
 }
@@ -39,7 +39,7 @@ body.income-page {
 .title1 {
     font-family: 'Bodoni Moda', serif;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 67px;
     line-height: 80px;
     margin-bottom: 0px;
 }
@@ -54,7 +54,7 @@ body.income-page {
 .subtitle {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
